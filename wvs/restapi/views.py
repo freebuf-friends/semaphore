@@ -40,7 +40,7 @@ def get_phone_num(request, ver):
 @csrf_exempt
 def XSend(request):
     import requests
-    r = requests.post('http://127.0.0.1/mail/', json.dumps({"message":"测试消息","access_key":""}))
+    #r = requests.post('http://127.0.0.1/mail/', json.dumps({"message":"测试消息","access_key":""}))
 
     print request.method
     return HttpResponse('test',content_type="text/plain")
