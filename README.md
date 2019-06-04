@@ -106,3 +106,7 @@ python manage.py createsuperuser
 manage.py showmigrations
 manage.py migrate polls 0004 --fake
 ```
+
+# 12. 依赖库
+
+pip install reqeusts
