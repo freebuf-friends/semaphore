@@ -18,7 +18,6 @@ sudo pip install virtualenvwrapper  --upgrade --ignore-installed
 # .bash_profile
 source /usr/local/bin/virtualenvwrapper.sh
 
-
 # 创建Python环境
 mkvirtualenv py27 -p /usr/bin/python
 workon py27
@@ -39,6 +38,7 @@ pip install reqeusts
 
 # 安装pytest库
 pip install pytest
+```
 
 # 2.创建Django工程
 ```
@@ -54,11 +54,11 @@ django-admin startapp scanner
 # 4.环境部署 
 
 Add 'jsonrpc' to your INSTALLED_APPS in your settings.py file
-设置djangoserver，端口为5000
+设置Django RPC server，端口为5000
 
 # 5.RPC方法声明
 
-​```python
+```python
 from jsonrpc import jsonrpc_method
 @jsonrpc_method('myapp.sayHello')
 def whats_the_time(request, name='Lester'):
@@ -80,8 +80,6 @@ python manager.py dsl
 显示semaphore/wvs/cmd/management/commands/dsl.pyc执行成功, 参数为close则为成功
 
 # 8.pytest测试
-
-
 
 ```
 pytest -v -s -m"scan" test.py
