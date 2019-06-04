@@ -5,4 +5,4 @@
 
 
 # AWVS基础登录时序图
-1[时许图](https://raw.githubusercontent.com/freebuf-friends/semaphore/master/doc/sequence.png)
+![时许图](https://raw.githubusercontent.com/freebuf-friends/semaphore/master/doc/sequence.png)
