@@ -104,21 +104,31 @@ manage.py migrate polls 0004 --fake
 
 # 12. 部署方式
 
-1.启动REST API服务
+## 12.1.启动REST API服务
 
+```
 python manage.py runserver 0.0.0.0:8080
+```
 
-2.启动RPC服务。 
+## 12.2.启动RPC服务。 
 
+```
 python manager.py runserver 0.0.0.0:5000
+```
 
-3.测试时序调用。
+## 12.3.测试时序调用。
 
-3.1 测试能过REST API调用RPC。
+### 12.3.1 测试能过REST API调用RPC。
+
+```
 curl -l -H "Content-type: application/json" -X POST -d '{"key":"test","domain":"test.com","index":"index.php","file":"index.php","params":"key1,key2,key3", "source":"test", "content":"test"}'  127.0.0.1:5000/interface_update/
+```
 
-3.2 测试直接调用RPC。
+### 12.3.2 测试直接调用RPC。
+
+```
 curl -l -H "Content-type: application/json" -X POST -d '{"key":"test","domain":"test.com","index":"index.php","file":"index.php","params":"key1,key2,key3", "source":"test", "content":"test"}'  127.0.0.1:5000/sidecar/
+```
 
 
 
