@@ -29,6 +29,9 @@ pip install djangorestframework==3.8.2
 git clone git://github.com/samuraisam/django-json-rpc.git
 cd django-json-rpc
 python setup.py install
+
+# 安装其他库
+pip install requests
 ```
 
 # 2.创建Django工程
@@ -45,7 +48,7 @@ django-admin startapp scanner
 # 4.环境部署 
 
 Add 'jsonrpc' to your INSTALLED_APPS in your settings.py file
-
+设置djangoserver，端口为5000
 
 # 5.RPC方法声明
 
@@ -65,16 +68,21 @@ s.myapp.sayHello('Sam')
 
 # 7.Django Command测试
 ```python
-python manager.py dsl
+python manage.py dsl
+显示semaphore/wvs/cmd/management/commands/dsl.pyc执行成功, 参数为close则为成功
+
 ```
 
 # 8.pytest测试
 ```
+pip install pytest
 pytest -v -s -m"scan" test.py
 ```
 
 # 9.文档生成
 ```
+npm install -g mermaid.cli
+
 dot arch.dot -T png -o arch.png
 ```
 

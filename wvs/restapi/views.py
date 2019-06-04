@@ -12,7 +12,6 @@ from django.http import HttpResponse
 import json
 import syslog_client
 
-
 class JSONResponse(HttpResponse):
     """
     An HttpResponse that renders it's content into JSON.

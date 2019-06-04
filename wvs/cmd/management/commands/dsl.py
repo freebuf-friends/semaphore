@@ -1,5 +1,7 @@
 #-*- coding:utf-8 -*-
+
 from django.core.management.base import BaseCommand, CommandError
+import traceback
 class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument(
@@ -32,4 +34,5 @@ class Command(BaseCommand):
             
             self.stdout.write(self.style.SUCCESS(u'命令%s执行成功, 参数为%s' % (__file__, options['index'])))
         except Exception, ex:
+            traceback.print_exc()
             self.stdout.write(self.style.ERROR(u'命令执行出错'))
