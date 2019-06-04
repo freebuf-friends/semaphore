@@ -30,9 +30,9 @@ git clone git://github.com/samuraisam/django-json-rpc.git
 cd django-json-rpc
 python setup.py install
 
-# 安装其他库
-pip install requests
-```
+# 安装基础HTTP库
+pip install reqeusts
+
 
 # 2.创建Django工程
 ```
@@ -48,7 +48,7 @@ django-admin startapp scanner
 # 4.环境部署 
 
 Add 'jsonrpc' to your INSTALLED_APPS in your settings.py file
-设置djangoserver，端口为5000
+
 
 # 5.RPC方法声明
 
@@ -68,21 +68,16 @@ s.myapp.sayHello('Sam')
 
 # 7.Django Command测试
 ```python
-python manage.py dsl
-显示semaphore/wvs/cmd/management/commands/dsl.pyc执行成功, 参数为close则为成功
-
+python manager.py dsl
 ```
 
 # 8.pytest测试
 ```
-pip install pytest
 pytest -v -s -m"scan" test.py
 ```
 
 # 9.文档生成
 ```
-npm install -g mermaid.cli
-
 dot arch.dot -T png -o arch.png
 ```
 
@@ -107,6 +102,33 @@ manage.py showmigrations
 manage.py migrate polls 0004 --fake
 ```
 
-# 12. 依赖库
+# 12. 部署方式
 
-pip install reqeusts
+## 12.1.启动REST API服务
+
+```
+python manage.py runserver 0.0.0.0:8080
+```
+
+## 12.2.启动RPC服务。 
+
+```
+python manager.py runserver 0.0.0.0:5000
+```
+
+## 12.3.测试时序调用。
+
+### 12.3.1 测试能过REST API调用RPC。
+
+```
+curl -l -H "Content-type: application/json" -X POST -d '{"key":"test","domain":"test.com","index":"index.php","file":"index.php","params":"key1,key2,key3", "source":"test", "content":"test"}'  127.0.0.1:5000/interface_update/
+```
+
+### 12.3.2 测试直接调用RPC。
+
+```
+curl -l -H "Content-type: application/json" -X POST -d '{"key":"test","domain":"test.com","index":"index.php","file":"index.php","params":"key1,key2,key3", "source":"test", "content":"test"}'  127.0.0.1:5000/sidecar/
+```
+
+
+
