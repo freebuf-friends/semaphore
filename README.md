@@ -74,7 +74,7 @@ s.myapp.sayHello('Sam')
 
 # 7.Django Command测试
 ```python
-python manager.py dsl
+python manage.py dsl
 ```
 
 显示semaphore/wvs/cmd/management/commands/dsl.pyc执行成功, 参数为close则为成功
@@ -122,7 +122,7 @@ manage.py migrate polls 0004 --fake
 python manage.py runserver 0.0.0.0:8080
 
 #12.2.启动RPC服务。 
-python manager.py runserver 0.0.0.0:5000
+python manage.py runserver 0.0.0.0:5000
 
 #12.3.测试时序调用。
 
