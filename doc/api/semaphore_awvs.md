@@ -3,7 +3,7 @@ tags: [semaphore]
 keywords: 
 last_updated: July 3, 2016
 summary: ""
-sidebar: orange_sidebar
+sidebar: semaphore_sidebar
 permalink: semaphore_awvs.html
 folder: orange
 category: API
