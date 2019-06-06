@@ -136,7 +136,7 @@ login     | awvs.py
 
 **返回结果** 
 
-```json
+```
 {
     True  // True认证成功， False认证失败
 }
@@ -160,7 +160,7 @@ domain | string | 域名
 
 **返回结果** 
 
-```json
+```
 {
     True  // True扫描域名添加成功， 
           // False扫描域名添加失败
