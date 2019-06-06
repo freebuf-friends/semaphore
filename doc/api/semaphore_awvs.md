@@ -69,7 +69,7 @@ URI                 | Method
 
 RPC Method                 | Function 
 ------------------- | ---- 
-sayHello     | What's_the_time 
+sayHello     | whats_the_time 
 
 
 
