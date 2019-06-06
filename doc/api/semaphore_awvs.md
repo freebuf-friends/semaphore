@@ -1,0 +1,59 @@
+---
+tags: [semaphore]
+keywords: 
+last_updated: July 3, 2016
+summary: ""
+sidebar: orange_sidebar
+permalink: semaphore_awvs.html
+folder: orange
+category: API
+redirect_from:
+    - /doc/api/semaphore_awvs/
+title: "Semaphore自动扫描请求"
+sort_title: "7"
+flag: "2"
+---
+
+
+
+
+#### 1) 漏洞扫描请求
+
+**请求**
+
+URI                 | Method 
+------------------- | ---- 
+/interface_update/     | Post
+
+**参数** 
+
+名称 | 类型 | 说明
+---- | ---- | -------
+key | string | 请求密码key。 
+domain | string | 需测试服务的域名。 
+index | string | 路由。 
+file | string | 路由所在源文件名。 
+params | string | 路由带参数。 
+source | string | 发送扫描请求的服务器IP。 
+content | string | 扫描文件的全部源文件文本内容。 
+
+
+
+**返回结果** 
+
+```
+{
+    "error":"0", //0无错误， -1发生错误
+    "errmsg":"none" // none无错误信息，
+                       key is empty!,
+                       access key error,
+                       source is empty,
+                       domain is empty,
+                       index is empty,
+                       file is empty,
+                       params is empty,
+                       content is empty   
+}
+```
+
+
