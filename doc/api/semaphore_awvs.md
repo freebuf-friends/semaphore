@@ -42,7 +42,7 @@ content | string | 扫描文件的全部源文件文本内容。
 
 **返回结果** 
 
-```json
+```
 {
     "error":"0", //0无错误， -1发生错误
     "errmsg":"none" /* none无错误信息，
@@ -90,7 +90,7 @@ name | string | 请求扫描的域名。
 
 **返回结果** 
 
-```json
+```
 {
     "Hello ?"  //Hello + 返回域名。
 }
@@ -126,7 +126,7 @@ dsl     | dsl.py
 
 **返回结果** 
 
-```json
+```
 {
     "Hello ?"  //Hello + 返回域名。
 }
