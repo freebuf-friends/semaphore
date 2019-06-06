@@ -42,9 +42,9 @@ content | string | 扫描文件的全部源文件文本内容。
 
 **返回结果** 
 
-```
+```json
 {
-    "error":"0", // 0无错误， -1发生错误
+    "error":"0", //0无错误， -1发生错误
     "errmsg":"none" /* none无错误信息，
                        key is empty!,
                        access key error,
@@ -53,8 +53,15 @@ content | string | 扫描文件的全部源文件文本内容。
                        index is empty,
                        file is empty,
                        params is empty,
-                       content is empty */  
+                       content is empty  */
+                    
 }
+```
+
+**调用例子**
+
+```shell
+curl -l -H "Content-type: application/json" -X POST -d '{"key":"test","domain":"test.com","index":"index.php","file":"index.php","params":"key1,key2,key3", "source":"test", "content":"test"}'  127.0.0.1:8080/interface_update/
 ```
 
 
@@ -83,10 +90,16 @@ name | string | 请求扫描的域名。
 
 **返回结果** 
 
-```
+```json
 {
-    "Hello ?"  // Hello + 返回域名。
+    "Hello ?"  //Hello + 返回域名。
 }
+```
+
+**调用例子**
+
+```shell
+curl -l -H "Content-type: application/json" -X POST -d '{"key":"test","domain":"test.com","index":"index.php","file":"index.php","params":"key1,key2,key3", "source":"test", "content":"test"}'  127.0.0.1:5000/sidecar/
 ```
 
 
@@ -113,15 +126,16 @@ dsl     | dsl.py
 
 **返回结果** 
 
-```
+```json
 {
-    "Hello ?"  // Hello + 返回域名。
+    "Hello ?"  //Hello + 返回域名。
 }
 ```
 
 
 
 #### 4) AWVS(库)
+
 ##### 4.1）登录
 
 **请求**
@@ -166,3 +180,6 @@ domain | string | 域名
           // False扫描域名添加失败
 }
 ```
+
+
+
