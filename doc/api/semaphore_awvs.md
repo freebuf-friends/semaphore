@@ -45,15 +45,15 @@ content | string | 扫描文件的全部源文件文本内容。
 ```json
 {
     "error":"0", //0无错误， -1发生错误
-    "errmsg":"none" // none无错误信息，
-                    // key is empty!,
-                    // access key error,
-                    // source is empty,
-                    // domain is empty,
-                    // index is empty,
-                    // file is empty,
-                    // params is empty,
-                    // content is empty   
+    "errmsg":"none" /* none无错误信息，
+                       key is empty!,
+                       access key error,
+                       source is empty,
+                       domain is empty,
+                       index is empty,
+                       file is empty,
+                       params is empty,
+                       content is empty */  
 }
 ```
 
@@ -85,7 +85,7 @@ name | string | 请求扫描的域名。
 
 ```json
 {
-    "Hello ?"  //Hello + 返回域名。
+    "Hello ?"  // Hello + 返回域名。
 }
 ```
 
@@ -115,7 +115,7 @@ dsl     | dsl.py
 
 ```json
 {
-    "Hello ?"  //Hello + 返回域名。
+    "Hello ?"  // Hello + 返回域名。
 }
 ```
 
