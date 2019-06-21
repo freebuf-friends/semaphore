@@ -44,6 +44,7 @@ def XSend(request):
     print request.method
     return HttpResponse('test',content_type="text/plain")
 
+
 @csrf_exempt
 def SendWxMessage(request):
     #print request.method
